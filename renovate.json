@@ -1,6 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":gitSignOff",
+    ":disableDependencyDashboard"
+  ],
+  "enabledManagers": [
+    "tekton",
+    "dockerfile"
+  ],
   "tekton": {
-    "schedule": ["at any time"]
+    "managerFilePatterns": ["/\\.yaml$/"],
+    "includePaths": [".tekton/**"]
+  },
+  "dockerfile": {
+    "packageRules": [
+      {
+        "matchPackageNames": [
+          "registry.access.redhat.com/ubi*{,/}**",
+        ],
+        "versioning": "base-images"
+      }
+    ]
   }
 }
