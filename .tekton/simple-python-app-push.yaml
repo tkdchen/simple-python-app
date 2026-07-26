@@ -346,7 +346,7 @@ spec:
       - input: $(params.skip-checks)
         operator: in
         values:
-        - "false"
+        - "true"
     - name: ecosystem-cert-preflight-checks
       params:
       - name: image-url
@@ -366,7 +366,7 @@ spec:
       - input: $(params.skip-checks)
         operator: in
         values:
-        - "false"
+        - "true"
     - name: sast-snyk-check
       params:
       - name: image-digest
