@@ -12,7 +12,7 @@ spec:
     resourceKind: pipeline
     params:
       - name: url
-        value: https://github.com/tkdchen/simple-python-app
+        value: https://gitcode.com/qicx/simple-python-app
       - name: revision
         value: main
       - name: pathInRepo

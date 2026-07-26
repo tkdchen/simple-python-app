@@ -11,7 +11,7 @@ spec:
     resolver: git
     params:
     - name: url
-      value: https://github.com/tkdchen/build-definitions
+      value: https://gitcode.com/qicx/build-definitions
     - name: revision
       value: main
     - name: pathInRepo
