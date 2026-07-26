@@ -13,14 +13,12 @@
     "managerFilePatterns": ["/\\.yaml$/"],
     "includePaths": [".tekton/**"]
   },
-  "dockerfile": {
-    "packageRules": [
-      {
-        "matchPackageNames": [
-          "registry.access.redhat.com/ubi*{,/}**",
-        ],
-        "versioning": "base-images"
-      }
-    ]
-  }
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "registry.access.redhat.com/ubi9/ubi-minimal"
+      ],
+      "versioning": "redhat"
+    }
+  ]
 }
