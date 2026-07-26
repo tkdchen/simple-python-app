@@ -6,3 +6,4 @@ namespace: default-tenant
 resources:
 - onboard.yaml
 - its.yaml
+- its-ec.yaml
