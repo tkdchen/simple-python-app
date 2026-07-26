@@ -1,0 +1,18 @@
+apiVersion: appstudio.redhat.com/v1beta2
+kind: IntegrationTestScenario
+metadata:
+  annotations:
+    test.appstudio.openshift.io/kind: enterprise-contract
+  name: simple-python-app-enterprise-contract
+spec:
+  application: simple-python-app
+  resolverRef:
+    resourceKind: pipeline
+    resolver: git
+    params:
+    - name: url
+      value: https://github.com/tkdchen/build-definitions
+    - name: revision
+      value: main
+    - name: pathInRepo
+      value: pipelines/enterprise-contract.yaml
