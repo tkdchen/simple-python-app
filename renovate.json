@@ -19,6 +19,12 @@
         "registry.access.redhat.com/ubi9/ubi-minimal"
       ],
       "versioning": "redhat"
+    },
+    {
+      "matchPackageNames": [
+        "quay.io/konflux-ci/tekton-catalog/*"
+      ],
+      "groupName": "Bundles Updates"
     }
   ]
 }
