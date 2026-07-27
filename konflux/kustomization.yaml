@@ -7,3 +7,4 @@ resources:
 - onboard.yaml
 - its.yaml
 - its-ec.yaml
+- policy.yaml

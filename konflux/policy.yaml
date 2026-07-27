@@ -1,0 +1,24 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: EnterpriseContractPolicy
+metadata:
+  name: default
+spec:
+  description: Extension of the enterprice-contract-policy/default policy.
+  name: Default
+  publicKey: k8s://openshift-pipelines/public-key
+  sources:
+  - config:
+      exclude:
+      - hermetic_task
+      - source_image
+      - rpm_repos
+      - trusted_task.trusted:build-image-index
+      - test.no_skipped_tests:sast-snyk-check-oci-ta
+      include:
+      - '@redhat'
+    data:
+    - oci::quay.io/konflux-ci/tekton-catalog/data-acceptable-bundles:latest@sha256:8fafd9ef0ec4e456944a33fdb446e090072f77f50ab0bf3ba8e52d8a4be6dd50
+    - github.com/redhat-appstudio/tsf-conforma-data//data?ref=1966f21842d507441a7a5e1c7de9071cf3f9ec53
+    name: Default
+    policy:
+    - oci::quay.io/conforma/release-policy:latest@sha256:5a042dc4a99589fe2ff6f239fdf45429d9d44ac01147ab56c96930a2f68ccc6a
