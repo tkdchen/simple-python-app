@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: default-tenant
 
 resources:
-- onboard.yaml
 - its.yaml
 - its-ec.yaml
 - policy.yaml
+- releaseplan.yaml
