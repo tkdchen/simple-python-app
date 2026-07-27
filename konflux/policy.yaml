@@ -9,9 +9,11 @@ spec:
   sources:
   - config:
       exclude:
-        - hermetic_task
-        - source_image
-        - rpm_repos
+      - hermetic_task
+      - source_image
+      - rpm_repos
+      - trusted_task.trusted:build-image-index
+      - test.no_skipped_tests:sast-snyk-check-oci-ta
       include:
       - '@redhat'
     data:
