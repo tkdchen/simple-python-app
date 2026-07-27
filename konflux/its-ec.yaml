@@ -6,6 +6,10 @@ metadata:
   name: simple-python-app-enterprise-contract
 spec:
   application: simple-python-app
+  params:
+    # Conforma searches this default policy from tenant namespace.
+    - name: POLICY_CONFIGURATION
+      value: default
   resolverRef:
     resourceKind: pipeline
     resolver: git
