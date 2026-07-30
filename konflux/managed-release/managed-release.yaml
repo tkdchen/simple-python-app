@@ -23,20 +23,24 @@ spec:
   - simple-python-app
   data:
     mapping:
+      defaults:
+        tags:
+        - latest
+        - "{{ timestamp }}"
+        pushSourceContainer: false
       components:
       - name: simple-python-app
         repositories:
         - url: quay.io/mytestworkload/default-tenant/releases/simple-python-app
-        tags:
-        - latest
-        - "{{ git_sha }}"
-        - "{{ git_short_sha }}"
-        - "{{ digest_sha }}"
+          tags:
+          - "{{ git_sha }}"
+          - "{{ git_short_sha }}"
+          - "{{ digest_sha }}"
   origin: default-tenant
   pipeline:
     pipelineRef:
       resolver: git
-      ociStorage: registry-service.kind-registry/simple-python-app-release-ta
+      ociStorage: quay.io/mytestworkload/managed-release/simple-python-app-release-ta
       params:
       - name: url
         value: "https://gitcode.com/qicx/release-service-catalog.git"
