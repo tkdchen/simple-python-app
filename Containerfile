@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/ubi-minimal:9.8-1785339117@sha256:17fd831ced9434de0a984d60b3fbe61008308261ba98bbc348d6fbdef05fa7c0
+FROM registry.access.redhat.com/ubi9/ubi-minimal:9.8-1788918977@sha256:6aa59f704742d12328aa43379048f951c052dfb684c22b79080baf34c1f92368
 RUN [ -e /licenses ] || mkdir /licenses
 COPY LICENSE /licenses
 WORKDIR /workspace
